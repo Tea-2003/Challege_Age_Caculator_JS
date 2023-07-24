@@ -14,7 +14,6 @@ body {
     padding: 56px;
     background: #FFF;
     border-radius: 24px 24px 176px 24px;
-
 }
 
 .input .form {
@@ -25,7 +24,7 @@ body {
 }
 
 .form .text input {
-    width: 130px;
+    width: 160px;
     cursor: pointer;
     padding: 25px 10px;
     border-radius: 8px;
@@ -33,7 +32,6 @@ body {
     font-family: Poppins, sans-serif;
     font-size: 16px;
     font-weight: 700;
-    line-height: 20px;
     letter-spacing: 2.1px;
     text-transform: uppercase;
     box-sizing: border-box;
@@ -87,31 +85,25 @@ body {
     background: black;
 }
 
+.output {
+    display: flex;
+}
 
-.output .title .dash {
+.output .number div {
     color: #854DFF;
     font-family: Poppins;
     font-size: 96px;
-    font-style: normal;
     font-weight: 400;
-    line-height: 105.6px;
-}
-.title{
-    padding: 10px;
+    margin-right: 19px;
 }
 
-.sub-title {
+.title div {
     color: #141414;
     font-family: Poppins, sans-serif;
     font-size: 96px;
     font-weight: 700;
-    line-height: 105.6px;
-    margin-top: 33px;
-    padding: 19px;
+
 }
-
-
-
 
 
 @media screen and (max-width: 768px) {
@@ -121,32 +113,28 @@ body {
     }
 
     .container {
-        max-width: 400px;
+        max-width: 368px;
+        padding: 164px 16px;
     }
 
     .container .rectangle {
+        border-radius: 24px 24px 88px 24px;
         padding: 30px;
     }
 
-    .dash {
+    .output .number div {
         color: #854DFF;
-        font-family: Poppins, sans-serif;
+        font-family: Poppins;
         font-size: 52px;
-        font-style: normal;
         font-weight: 400;
-        line-height: 57.2px;
-    }
-    .title{
-        padding: 0px;
+        margin-right: 19px;
     }
 
-    .sub-title {
+    .title div {
         color: #141414;
         font-family: Poppins, sans-serif;
-        font-size: 53px;
+        font-size: 52px;
         font-weight: 700;
-        margin-top: 33px;
-        padding: 10px;
 
     }
 
@@ -159,7 +147,6 @@ body {
         font-family: Poppins, sans-serif;
         font-size: 16px;
         font-weight: 700;
-        line-height: 20px;
         letter-spacing: 2.1px;
         text-transform: uppercase;
         box-sizing: border-box;
@@ -168,10 +155,11 @@ body {
         transition: 0.5s;
         outline: none;
     }
-    .submit-btn{
+
+    .submit-btn {
         cursor: pointer;
         position: absolute;
-        right: 0px;
+        right: -13.5px;
         top: 24px;
         padding: 0px;
         border: none;
@@ -184,10 +172,11 @@ body {
         background: #854DFF;
 
     }
+
     .submit-btn img:hover {
         padding: 19px;
         border-radius: 9999px;
-        background: black;
+        background: #854DFF;
     }
 
 }

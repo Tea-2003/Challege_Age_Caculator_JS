@@ -28,33 +28,29 @@ function validate() {
         const parent = i.parentElement;
         if (!i.value) {
             i.style.borderColor = "red";
-            parent.querySelector("small").innerText = "";
             validator = false;
         } else if (monthIn.value > 12) {
             monthIn.style.borderColor = "red";
-            monthIn = parentElement.querySelector("small").innerText = "";
             validator = false;
         } else if (monthIn.value > 31) {
             dayIn.style.borderColor = "red";
-            dayIn = parentElement.querySelector("small").innerText = "";
             validator = false;
         } else {
             i.style.borderColor = "black";
-            parent.querySelector("small").innerText = "";
             validator = true;
         }
     })
     return validator;
 }
-
-function handleSubmit(e){
+ 
+function handleSubmit(e) {
     e.preventDefault();
-    if(validate()){
-        if (dayIn.value > day){
+    if (validate()) {
+        if (dayIn.value > day) {
             day = day + months[month - 1];
             month = month - 1;
         }
-        if(monthIn.value > month){
+        if (monthIn.value > month) {
             month = month + 12;
             year = year - 1;
         }
