@@ -1,8 +1,6 @@
 body {
     width: auto;
     height: auto;
-    margin: 0;
-    padding: 0;
     background: #f0f0f0;
 }
 
@@ -19,16 +17,18 @@ body {
 
 }
 
-.form-left .form-text {
+.input .form {
+
     display: flex;
     gap: 16px;
     align-items: center;
 }
 
-.form-text .text input {
-    padding: 25px 0;
+.form .text input {
+    width: 130px;
+    cursor: pointer;
+    padding: 25px 10px;
     border-radius: 8px;
-    border: 1px solid #DBDBDB;
     color: #716F6F;
     font-family: Poppins, sans-serif;
     font-size: 16px;
@@ -36,6 +36,15 @@ body {
     line-height: 20px;
     letter-spacing: 2.1px;
     text-transform: uppercase;
+    box-sizing: border-box;
+    border: 1px solid #DBDBDB;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+.form .text input:focus {
+    border: 1px solid #854DFF;
 }
 
 .sub-text {
@@ -56,25 +65,39 @@ body {
     padding: 48px 0px 33px 0px;
 }
 
-.button {
+.submit-btn {
+    cursor: pointer;
     position: absolute;
     right: 0px;
-    top: 5px;
+    top: 8px;
+    padding: 0px;
+    border: none;
+    background-color: white;
 }
 
-.button img {
+.submit-btn img {
     padding: 25px;
     border-radius: 9999px;
     background: #854DFF;
 }
 
-.form-bottom .title .icon_highlight {
+.submit-btn img:hover {
+    padding: 25px;
+    border-radius: 9999px;
+    background: black;
+}
+
+
+.output .title .dash {
     color: #854DFF;
     font-family: Poppins;
     font-size: 96px;
     font-style: normal;
     font-weight: 400;
     line-height: 105.6px;
+}
+.title{
+    padding: 10px;
 }
 
 .sub-title {
@@ -84,6 +107,7 @@ body {
     font-weight: 700;
     line-height: 105.6px;
     margin-top: 33px;
+    padding: 19px;
 }
 
 
@@ -91,7 +115,79 @@ body {
 
 
 @media screen and (max-width: 768px) {
-    /* .container{}
-    .container .rectangle{} */
+
+    body {
+        display: block;
+    }
+
+    .container {
+        max-width: 400px;
+    }
+
+    .container .rectangle {
+        padding: 30px;
+    }
+
+    .dash {
+        color: #854DFF;
+        font-family: Poppins, sans-serif;
+        font-size: 52px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 57.2px;
+    }
+    .title{
+        padding: 0px;
+    }
+
+    .sub-title {
+        color: #141414;
+        font-family: Poppins, sans-serif;
+        font-size: 53px;
+        font-weight: 700;
+        margin-top: 33px;
+        padding: 10px;
+
+    }
+
+    .form .text input {
+        width: 90px;
+        cursor: pointer;
+        padding: 17px 12px;
+        border-radius: 8px;
+        color: #716F6F;
+        font-family: Poppins, sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 2.1px;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        border: 1px solid #DBDBDB;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        outline: none;
+    }
+    .submit-btn{
+        cursor: pointer;
+        position: absolute;
+        right: 0px;
+        top: 24px;
+        padding: 0px;
+        border: none;
+        background-color: white;
+    }
+
+    .submit-btn img {
+        padding: 19px;
+        border-radius: 9999px;
+        background: #854DFF;
+
+    }
+    .submit-btn img:hover {
+        padding: 19px;
+        border-radius: 9999px;
+        background: black;
+    }
 
 }
