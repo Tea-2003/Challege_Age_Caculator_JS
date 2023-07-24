@@ -8,6 +8,9 @@ body {
     max-width: 840px;
     margin: 0 auto;
     padding: 89px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
 }
 
 .container .rectangle {
@@ -25,7 +28,7 @@ body {
 .form .text input {
     width: 160px;
     cursor: pointer;
-    padding: 25px 10px;
+    padding: 17px 16px;
     border-radius: 8px;
     color: #716F6F;
     font-family: Poppins, sans-serif;
@@ -52,6 +55,7 @@ body {
     line-height: 20px;
     letter-spacing: 2.1px;
     text-transform: uppercase;
+    padding-bottom: 10px;
 }
 
 .line-button {
@@ -66,14 +70,14 @@ body {
     cursor: pointer;
     position: absolute;
     right: 0px;
-    top: 8px;
+    top: 10px;
     padding: 0px;
     border: none;
     background-color: white;
 }
 
 .submit-btn img {
-    padding: 25px;
+    padding: 26px 26px;
     border-radius: 9999px;
     background: #854DFF;
 }
@@ -91,7 +95,7 @@ body {
 .output .number div {
     color: #854DFF;
     font-family: Poppins;
-    font-size: 96px;
+    font-size: 95px;
     font-weight: 400;
     margin-right: 19px;
 }
@@ -99,7 +103,7 @@ body {
 .title div {
     color: #141414;
     font-family: Poppins, sans-serif;
-    font-size: 96px;
+    font-size: 95px;
     font-weight: 700;
 
 }
@@ -107,7 +111,7 @@ body {
 @media screen and (max-width: 768px) {
 
     .container {
-        max-width: 400px;
+        display: block;
         padding: 164px 16px;
     }
 
@@ -118,20 +122,20 @@ body {
 
     .output .number div {
         color: #854DFF;
-        font-size: 52px;
+        font-size: 50px;
         font-weight: 700;
         margin-right: 19px;
     }
 
     .title div {
         color: #141414;
-        font-size: 52px;
+        font-size: 50px;
         font-weight: 700;
 
     }
 
     .form .text input {
-        width: 90px;
+        width: 80px;
         cursor: pointer;
         padding: 17px 12px;
     }

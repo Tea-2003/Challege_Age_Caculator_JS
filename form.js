@@ -1,66 +1,36 @@
-// input
-const dayIn = document.getElementById("day");
-const monthIn = document.getElementById("month");
-const yearIn = document.getElementById("year");
+function Validate() {
+    const dayIn = parseInt(document.getElementById("day").value);
+    const monthIn = parseInt(document.getElementById("month").value);
+    const yearIn = parseInt(document.getElementById("year").value);
 
-// output
-const dayOut = document.getElementById("DD");
-const monthOut = document.getElementById("MM");
-const yearOut = document.getElementById("YYYY");
+    const today = new Date();
+    const birthDate = new Date(yearIn, monthIn - 1, dayIn);
 
-//form
-const form = document.querySelector("form")
-
-// Adding
-form.addEventListener("submit", handleSubmit);
-
-const date = new Date();
-let day = date.getDate();
-let month = 1 + date.getMonth();
-let year = date.getFullYear();
-
-const months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-
-function validate() {
-    const inputs = document.querySelectorAll("input");
-    let validator = true;
-    inputs.forEach((i) => {
-        const parent = i.parentElement;
-        if (!i.value) {
-            i.style.borderColor = "red";
-            validator = false;
-        } else if (monthIn.value > 12) {
-            monthIn.style.borderColor = "red";
-            validator = false;
-        } else if (dayIn.value > 31) {
-            dayIn.style.borderColor = "red";
-            validator = false;
-        } else {
-            i.style.borderColor = "black";
-            validator = true;
-        }
-    })
-    return validator;
-}
-
-function handleSubmit(e) {
-    e.preventDefault();
-    if (validate()) {
-        if (dayIn.value > day) {
-            day = day + months[month - 1];
-            month = month - 1;
-        }
-        if (monthIn.value > month) {
-            month = month + 12;
-            year = year - 1;
-        }
-
-        const d = day - dayIn.value;
-        const m = month - monthIn.value;
-        const y = year - yearIn.value;
-
-        dayOut.innerHTML = d;
-        monthOut.innerHTML = m;
-        yearOut.innerHTML = y;
+    // Check if the date of birth is valid
+    if (
+        isNaN(dayIn) || isNaN(monthIn) || isNaN(yearIn) ||
+        dayIn < 1 || dayIn > 31 ||
+        monthIn < 1 || monthIn > 12 ||
+        yearIn < 0 || yearIn.toString().length !== 4 ||
+        birthDate > today ||
+        dayIn !== birthDate.getDate() ||
+        monthIn - 1 !== birthDate.getMonth()
+    ) {
+        alert("Please double check your date, month, and year of birth");
+        document.getElementById("YYYY").innerText = "--";
+        document.getElementById("MM").innerText = "--";
+        document.getElementById("DD").innerText = "--";
+        return;
     }
+
+    // Calculate age
+    const ageInMilliseconds = today - birthDate;
+    const ageDate = new Date(ageInMilliseconds);
+    const years = ageDate.getUTCFullYear() - 1970;
+    const months = ageDate.getUTCMonth();
+    const days = ageDate.getUTCDate() - 1;
+
+    document.getElementById("YYYY").innerText = years;
+    document.getElementById("MM").innerText = months;
+    document.getElementById("DD").innerText = days;
 }
