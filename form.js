@@ -42,7 +42,7 @@ function validate() {
     })
     return validator;
 }
- 
+
 function handleSubmit(e) {
     e.preventDefault();
     if (validate()) {
