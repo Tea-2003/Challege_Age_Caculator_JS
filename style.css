@@ -60,6 +60,7 @@ body {
 }
 
 .line {
+    
     padding: 48px 0px 33px 0px;
 }
 
@@ -126,7 +127,7 @@ body {
         color: #854DFF;
         font-family: Poppins;
         font-size: 52px;
-        font-weight: 400;
+        font-weight: 700;
         margin-right: 19px;
     }
 

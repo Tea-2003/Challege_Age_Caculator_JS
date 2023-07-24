@@ -32,7 +32,7 @@ function validate() {
         } else if (monthIn.value > 12) {
             monthIn.style.borderColor = "red";
             validator = false;
-        } else if (monthIn.value > 31) {
+        } else if (dayIn.value > 31) {
             dayIn.style.borderColor = "red";
             validator = false;
         } else {
