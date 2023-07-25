@@ -12,47 +12,48 @@
 <body>
     <div class="container">
         <div class="rectangle">
-                <div class="input">
-                    <div class="form">
-                        <div class="text">
-                            <div class="sub-text">day</div>
-                            <input type="number" id="day" placeholder="DD">
-                        </div>
-
-                        <div class="text">
-                            <div class="sub-text">month</div>
-                            <input type="number" id="month" placeholder="MM">
-                        </div>
-
-                        <div class="text">
-                            <div class="sub-text">year</div>
-                            <input type="number" id="year" placeholder="YYYY">
-                        </div>
+            <div class="input">
+                <div class="form">
+                    <div class="text">
+                        <div class="sub-text">day</div>
+                        <input type="number" id="day" placeholder="DD">
                     </div>
 
-            <div class="line-button">
-                <div class="line">
-                    <hr>
-                    <button type="submit" class="submit-btn" onclick="Validate()"><img src="./image/icon_arrow.svg" alt="icon"></button>
+                    <div class="text">
+                        <div class="sub-text">month</div>
+                        <input type="number" id="month" placeholder="MM">
+                    </div>
+
+                    <div class="text">
+                        <div class="sub-text">year</div>
+                        <input type="number" id="year" placeholder="YYYY">
+                    </div>
+                </div>
+
+                <div class="line-button">
+                    <div class="line">
+                        <hr>
+                        <button type="submit" class="submit-btn" onclick="Validate()"><img src="./image/icon_arrow.svg"
+                                alt="icon"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="output">
+                <div class="number">
+                    <div class="dash" id="YYYY">--</div>
+                    <div class="dash" id="MM">--</div>
+                    <div class="dash" id="DD">--</div>
+                </div>
+                <div class="title">
+                    <div class="sub-title">years</div>
+                    <div class="sub-title">months</div>
+                    <div class="sub-title">days</div>
                 </div>
             </div>
         </div>
 
-        <div class="output">
-            <div class="number">
-                <div class="dash" id="YYYY">--</div>
-                <div class="dash" id="MM">--</div>
-                <div class="dash" id="DD">--</div>
-            </div>
-            <div class="title">
-                <div class="sub-title">years</div>
-                <div class="sub-title">months</div>
-                <div class="sub-title">days</div>
-            </div>
-        </div>
-    </div>
-
-    <script src="form.js"></script>
+        <script src="form.js"></script>
 </body>
 
 </html>

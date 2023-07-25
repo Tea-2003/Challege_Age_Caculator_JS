@@ -8,9 +8,9 @@ body {
     max-width: 840px;
     margin: 0 auto;
     padding: 89px;
-    /* display: flex;
+    display: flex;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
 }
 
 .container .rectangle {
@@ -26,7 +26,7 @@ body {
 }
 
 .form .text input {
-    width: 160px;
+    width: 110px;
     cursor: pointer;
     padding: 17px 16px;
     border-radius: 8px;
@@ -64,6 +64,13 @@ body {
 
 .line {
     padding: 48px 0px 33px 0px;
+}
+hr{
+    border-width: 1px 0 0 0;
+    height: 0;
+    display: inline-block;
+    width: 100%;
+    background: none;
 }
 
 .submit-btn {
@@ -135,14 +142,14 @@ body {
     }
 
     .form .text input {
-        width: 80px;
+        width: 90px;
         cursor: pointer;
         padding: 17px 12px;
     }
 
     .submit-btn {
-        right: -13.5px;
-        top: 24px;
+        right: 0px;
+        top: 17px;
         padding: 0px;
     }
 

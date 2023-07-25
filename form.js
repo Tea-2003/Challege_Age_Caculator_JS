@@ -8,18 +8,21 @@ function Validate() {
 
     // Check if the date of birth is valid
     if (
-        isNaN(dayIn) || isNaN(monthIn) || isNaN(yearIn) ||
-        dayIn < 1 || dayIn > 31 ||
-        monthIn < 1 || monthIn > 12 ||
-        yearIn < 0 || yearIn.toString().length !== 4 ||
-        birthDate > today ||
-        dayIn !== birthDate.getDate() ||
-        monthIn - 1 !== birthDate.getMonth()
-    ) {
+        isNaN(dayIn) || isNaN(monthIn) || isNaN(yearIn) || yearIn < 0 || yearIn.toString().length !== 4) {
         alert("Please double check your date, month, and year of birth");
-        document.getElementById("YYYY").innerText = "--";
-        document.getElementById("MM").innerText = "--";
-        document.getElementById("DD").innerText = "--";
+        return;
+    }
+
+    if (dayIn < 1 || dayIn > 31) {
+        alert("Please double check your date. Thank");
+        return;
+    }
+    if (monthIn < 1 || monthIn > 12) {
+        alert("Please double check your month");
+        return;
+    }
+    if (birthDate > today || birthDate.getDate() !== dayIn || birthDate.getMonth() !== monthIn - 1) {
+        alert("Date of birth is invalid or in the future.");
         return;
     }
 
